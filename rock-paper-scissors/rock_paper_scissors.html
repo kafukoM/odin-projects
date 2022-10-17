@@ -8,12 +8,29 @@
 
 <body>
 
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+
+    <div id="output">
+
+
+    </div>
+
+
 
     <script>
+        const output = document.getElementById('output');
+        const btns = document.querySelectorAll('button')
         const options = ['rock', 'paper', 'scissors'];
 
-        var playerWins = 0;
-        var computerWins = 0;
+        let playerWins = 0;
+        let computerWins = 0;
+        let counter = 0;
+
+
+
+        btns.forEach(button => button.addEventListener("click", playRound));
 
 
 
@@ -23,53 +40,71 @@
             return result;
         }
 
-        function playRound(playerSelection, computerSelection) {
 
-            playerSelection = prompt('Input your player selection: ').toLowerCase();
+        function playRound(e) {
+            playerSelection = e.target.getAttribute('class');
+            console.log(playerSelection);
             computerSelection = computerPlay();
 
             if (playerSelection == 'paper' && computerSelection == 'rock') {
                 playerWins++;
-                return console.log('You win. Paper beats rock');
-            } else if (playerSelection == 'paper' && computerSelection == 'paper') {
-                return console.log('Tied');
+                counter++;
+
             } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
                 computerWins++;
-                return console.log('You lose. Scissors beat paper');
-            } else if (playerSelection == 'rock' && computerSelection == 'rock') {
-                return console.log('Tied');
+                counter++;
+
             } else if (playerSelection == 'rock' && computerSelection == 'paper') {
                 computerWins++;
-                return console.log('You lose. Paper beat rock');
+                counter++;
+
             } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
                 playerWins++;
-                return console.log('You win. Rock beat scissors');
-            } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
-                return console.log('Tied');
+                counter++;
+
             } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
                 playerWins++;
-                return console.log('You win. Scissors beat paper');
+                counter++;
+
             } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
                 computerWins++;
-                return console.log('You win. Scissors beat paper');
+                counter++;
+
+            }
+
+            output.textContent = `Running Score: Player ${playerWins} - Computer ${computerWins} `;
+
+            if (playerWins == 5) {
+                alert('You win');
+            } else if (computerWins == 5) {
+                alert('You lose');
             }
 
         }
 
-        function game() {
-            for (let i = 0; i < 5; i++) {
-                playRound();
-            }
-            if (playerWins > computerWins) {
-                alert(`The winner is you with ${playerWins} wins`);
-            } else {
-                winner = computerWins;
-                alert(`The winner is computer with ${computerWins} wins`);
-            }
 
-        }
 
-        game();
+
+
+
+
+
+
+
+
+
+        //function game() {
+        //  for (let i = 0; i < 5; i++) {
+        //    playRound();
+        //}
+        //if (playerWins > computerWins) {
+        //       alert(`The winner is you with ${playerWins} wins`);
+        //   } else {
+        //       winner = computerWins;
+        //       alert(`The winner is computer with ${computerWins} wins`);
+        //   }
+
+        // }
     </script>
 
 </body>
