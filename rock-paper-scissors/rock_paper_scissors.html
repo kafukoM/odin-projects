@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RockPaperScissors</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+
+
+    <script>
+        const options = ['rock', 'paper', 'scissors'];
+
+        var playerWins = 0;
+        var computerWins = 0;
+
+
+
+        function computerPlay() {
+            const randomIndex = Math.floor(Math.random() * options.length);
+            const result = options[randomIndex];
+            return result;
+        }
+
+        function playRound(playerSelection, computerSelection) {
+
+            playerSelection = prompt('Input your player selection: ').toLowerCase();
+            computerSelection = computerPlay();
+
+            if (playerSelection == 'paper' && computerSelection == 'rock') {
+                playerWins++;
+                return console.log('You win. Paper beats rock');
+            } else if (playerSelection == 'paper' && computerSelection == 'paper') {
+                return console.log('Tied');
+            } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+                computerWins++;
+                return console.log('You lose. Scissors beat paper');
+            } else if (playerSelection == 'rock' && computerSelection == 'rock') {
+                return console.log('Tied');
+            } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+                computerWins++;
+                return console.log('You lose. Paper beat rock');
+            } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+                playerWins++;
+                return console.log('You win. Rock beat scissors');
+            } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
+                return console.log('Tied');
+            } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+                playerWins++;
+                return console.log('You win. Scissors beat paper');
+            } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+                computerWins++;
+                return console.log('You win. Scissors beat paper');
+            }
+
+        }
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                playRound();
+            }
+            if (playerWins > computerWins) {
+                alert(`The winner is you with ${playerWins} wins`);
+            } else {
+                winner = computerWins;
+                alert(`The winner is computer with ${computerWins} wins`);
+            }
+
+        }
+
+        game();
+    </script>
+
+</body>
