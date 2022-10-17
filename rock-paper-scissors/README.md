@@ -1,0 +1,1 @@
+Simple Rock, Paper & Scissors game created as part of the ODIN PROJECT assignment deliverables.
