@@ -1,0 +1,15 @@
+.parent {
+    margin: 100px 100px 100px 200px;
+    width: 900px;
+    min-height: fit-content;
+}
+
+.box {
+    border: 1px solid red;
+    width: 35px;
+}
+
+.container {
+    display: flex;
+    height: 35px;
+}
