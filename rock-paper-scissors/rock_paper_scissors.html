@@ -43,7 +43,6 @@
 
         function playRound(e) {
             playerSelection = e.target.getAttribute('class');
-            console.log(playerSelection);
             computerSelection = computerPlay();
 
             if (playerSelection == 'paper' && computerSelection == 'rock') {
@@ -81,30 +80,6 @@
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-        //function game() {
-        //  for (let i = 0; i < 5; i++) {
-        //    playRound();
-        //}
-        //if (playerWins > computerWins) {
-        //       alert(`The winner is you with ${playerWins} wins`);
-        //   } else {
-        //       winner = computerWins;
-        //       alert(`The winner is computer with ${computerWins} wins`);
-        //   }
-
-        // }
     </script>
 
 </body>

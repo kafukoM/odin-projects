@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button class="button">Click Me!</button>
+    <div class="parent">
+    </div>
+
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    const button = document.querySelector('.button');
+    //const container = document.querySelector('.container');
+
+
+    button.addEventListener('click', createDiv);
+
+
+    function createDiv() {
+        for (let j = 0; j < 16; j++) {
+            let container = document.createElement('div');
+            container.setAttribute('class', 'container');
+            parent.appendChild(container);
+            for (let i = 0; i < 16; i++) {
+                let div = document.createElement('div');
+                div.setAttribute('class', 'box');
+                container.appendChild(div);
+
+            }
+        }
+
+
+
+
+
+
+    }
+</script>
+</body>
+
+</html>
