@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <button>Click Me!</button>
     <div class="parent">
     </div>
 
@@ -17,31 +18,30 @@
 
 <script>
     const parent = document.querySelector('.parent');
-    //const button = document.querySelector('.button');
-    //const box = document.querySelector('.box');
+    const button = document.querySelector('button');
 
+    button.addEventListener('click', () => {
+        let userInput = Number(prompt('Enter number of squares: '));
+        for (let j = 0; j < userInput; j++) {
+            let container = document.createElement('div');
+            container.setAttribute('class', 'container');
+            parent.appendChild(container);
+            for (let i = 0; i < userInput; i++) {
+                let div = document.createElement('div');
+                div.setAttribute('class', 'box');
+                container.appendChild(div);
 
-    //button.addEventListener('click', createDiv);
-
-    //box.addEventListener('mouseover', (e) => {
-    //  e.target.style.backgroundColor = 'blue';
-    //})
-
-
-    for (let j = 0; j < 16; j++) {
-        let container = document.createElement('div');
-        container.setAttribute('class', 'container');
-        parent.appendChild(container);
-        for (let i = 0; i < 16; i++) {
-            let div = document.createElement('div');
-            div.setAttribute('class', 'box');
-            container.appendChild(div);
-
+            }
         }
-    }
 
-    const box = document.querySelectorAll('.box');
-    box.forEach(square => square.addEventListener('mouseover', changeColor));
+
+        const box = document.querySelectorAll('.box');
+        box.forEach(square => square.addEventListener('mouseover', changeColor));
+    })
+
+
+
+
 
     function randomInteger(max) {
         return Math.floor(Math.random() * (max + 1));
