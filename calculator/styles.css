@@ -24,7 +24,10 @@
     margin-bottom: 5px;
 }
 
-.equals,
+.equals {
+    width: 55px;
+}
+
 .clear {
     width: 55px;
 }
