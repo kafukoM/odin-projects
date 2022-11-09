@@ -1,5 +1,5 @@
 .container {
-    margin: 50% 0 50% 45%;
+    margin: 200px 0 0 500px;
     border: 1px solid black;
     width: 170px;
     padding: 10px;
@@ -26,5 +26,5 @@
 
 .equals,
 .clear {
-    width: 65px;
+    width: 55px;
 }
