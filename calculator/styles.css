@@ -1,7 +1,7 @@
 .container {
     margin: 50% 0 50% 45%;
     border: 1px solid black;
-    width: fit-content;
+    width: 170px;
     padding: 10px;
     background-color: lightblue;
 }
@@ -11,6 +11,7 @@
     border: 1px solid lightcyan;
     height: 35px;
     margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .row1,
@@ -21,4 +22,9 @@
     justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.equals,
+.clear {
+    width: 65px;
 }
