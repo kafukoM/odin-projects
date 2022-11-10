@@ -13,31 +13,31 @@
     <div class="container">
         <div class="screen"></div>
         <div class="row1">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="clear">C</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="number clear">C</button>
 
         </div>
 
         <div class="row2">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>/</button>
-            <button>*</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator divide">/</button>
+            <button class="operator multiply">*</button>
         </div>
         <div class="row3">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            <button>-</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator add">+</button>
+            <button class="operator subtract">-</button>
         </div>
         <div class="row4">
-            <button>^</button>
-            <button>0</button>
-            <button>.</button>
+            <button class="power">^</button>
+            <button class="number">0</button>
+            <button class="point">.</button>
             <button class="equals">=</button>
         </div>
 
@@ -51,18 +51,39 @@
     const btn = document.querySelectorAll('button');
     const screen = document.querySelector('.screen');
     const clear = document.querySelector('.clear');
+    const equals = document.querySelector('.equals');
+    const operator = document.querySelectorAll('.operator');
+    const number = document.querySelectorAll('.number');
+    let inputArray = [];
+    let sign;
+
+    number.forEach(num => num.addEventListener('click', numPress));
+    equals.addEventListener('click', evalExpression);
+    operator.forEach(op => op.addEventListener('click', opPress));
+
+    function evalExpression() {
+        let result = operate(sign, inputArray[0], inputArray[1]);
+        screen.innerText = result;
+    }
+
+    function opPress(e) {
+        sign = e.target.innerText;
+        screen.innerText += sign;
+
+    }
 
 
-    function btnClick(e) {
+    function numPress(e) {
         if (e.target.innerText === 'C') {
             screen.textContent = '';
         } else {
-            let number = e.target.innerText;
-            screen.textContent += number;
+            let input = e.target.innerText;
+            screen.textContent += input;
+            let inputNo = parseInt(input);
+            inputArray.push(inputNo);
         }
 
     }
-    btn.forEach(button => button.addEventListener("click", btnClick));
 
     function add(x, y) {
         return x + y;
@@ -91,6 +112,4 @@
             return multiply(num1, num2);
         }
     }
-
-    console.log(operate('*', 5, 10));
 </script>
