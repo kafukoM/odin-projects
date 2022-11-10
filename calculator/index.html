@@ -56,19 +56,40 @@
     const number = document.querySelectorAll('.number');
     let inputArray = [];
     let sign;
+    let num1 = [];
+    let num2 = [];
 
     number.forEach(num => num.addEventListener('click', numPress));
     equals.addEventListener('click', evalExpression);
     operator.forEach(op => op.addEventListener('click', opPress));
 
     function evalExpression() {
-        let result = operate(sign, inputArray[0], inputArray[1]);
-        screen.innerText = result;
+        // let result = operate(sign, inputArray[0], inputArray[1]);
+        // screen.innerText = result;
+        //console.log(inputArray);
+        for (let i = 0; i < inputArray.length; i++) {
+            if (inputArray[i] == '+' || inputArray[i] == '-' || inputArray[i] == '/' || inputArray[i] == '*') {
+                //num1 = inputArray.slice(0, inputArray.index0f(inputArray[i]));
+                let signIndex = inputArray.indexOf(inputArray[i]);
+                num1 = inputArray.slice(0, signIndex + 1);
+                num2 = inputArray.slice(signIndex + 1);
+                sign = num1.pop();
+
+                num1 = parseInt(num1.join(''));
+                num2 = parseInt(num2.join(''));
+
+
+
+            }
+        }
+        screen.textContent = '';
+        screen.textContent += operate(sign, num1, num2);
     }
 
     function opPress(e) {
         sign = e.target.innerText;
         screen.innerText += sign;
+        inputArray.push(sign);
 
     }
 
@@ -79,8 +100,8 @@
         } else {
             let input = e.target.innerText;
             screen.textContent += input;
-            let inputNo = parseInt(input);
-            inputArray.push(inputNo);
+            //let inputNo = parseInt(input);
+            inputArray.push(input);
         }
 
     }
@@ -101,7 +122,7 @@
         return x / y;
     }
 
-    function operate(operator, num1, num2) {
+    function operate(operator, input1, input2) {
         if (operator == '+') {
             return add(num1, num2);
         } else if (operator == '-') {
