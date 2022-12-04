@@ -64,12 +64,9 @@
     operator.forEach(op => op.addEventListener('click', opPress));
 
     function evalExpression() {
-        // let result = operate(sign, inputArray[0], inputArray[1]);
-        // screen.innerText = result;
-        //console.log(inputArray);
+
         for (let i = 0; i < inputArray.length; i++) {
             if (inputArray[i] == '+' || inputArray[i] == '-' || inputArray[i] == '/' || inputArray[i] == '*') {
-                //num1 = inputArray.slice(0, inputArray.index0f(inputArray[i]));
                 let signIndex = inputArray.indexOf(inputArray[i]);
                 num1 = inputArray.slice(0, signIndex + 1);
                 num2 = inputArray.slice(signIndex + 1);
@@ -100,7 +97,6 @@
         } else {
             let input = e.target.innerText;
             screen.textContent += input;
-            //let inputNo = parseInt(input);
             inputArray.push(input);
         }
 
