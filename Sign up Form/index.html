@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="image-container">
+            <div class="odin-container">
+                <img id="odin" src="odin.png" alt="">
+                <div class="odin-font">ODIN</div>
+
+            </div>
+            <img id="leaves" src="leaves.jpeg" alt="">
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up now to get started.
+                <br> You know you want to
+            </div>
+            <div class="form-body">
+                <form class="form-horizontal" action="" method="post">
+                    <div class="body-1">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="error" id="fname" placeholder="" name="fname" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="error" placeholder="" name="email" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="lname" class="error" placeholder="" name="password" required>
+                        <p></p>
+                    </div>
+
+                    <div class="body-2">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="" class="error" name="lname" required>
+                        <label for="contact">Phone Number</label>
+                        <input type="tel" inputmode="number" pattern="\d*" maxlength="10" id="contact" placeholder="" name="contact" required>
+
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" placeholder="" name="confirm_password" required>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+            <div class="form-footer">
+                <button type="submit">Create Account</button><br> Already have an account?
+                <a href="#">Login</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const pass1 = document.querySelector('input[name="password"');
+    const pass2 = document.querySelector('input[name="confirm_password"');
+    const submit = document.querySelector('button');
+    const paragraph = document.querySelector('p');
+    const errorText = document.createTextNode('Passwords do not match');
+    const successText = document.createTextNode('User successfully created');
+
+    submit.addEventListener('click', verifyPassword);
+
+    function verifyPassword(event) {
+        event.preventDefault();
+        if (pass1.value != pass2.value) {
+            paragraph.appendChild(errorText);
+            pass1.style.border = '1px solid red';
+            pass2.style.border = '1px solid red';
+
+
+        } else {
+            console.log('User successfully created')
+
+            paragraph.appendChild(successText);
+            paragraph.style.color = 'green';
+
+
+        }
+    }
+</script>
+
+</html>
