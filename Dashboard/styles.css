@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 5fr;
+    height: 1000px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header,
+.dashboard,
+.body {
+    display: grid;
+}
+
+.header {
+    border: 1px solid green;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.dashboard {
+    border: 1px solid blue;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    justify-content: start;
+}
+
+.body {
+    border: 1px solid red;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.dashboard-nav {
+    padding-top: 20px;
+    margin-left: 8px;
+}
+
+.dash-list {
+    display: grid;
+    row-gap: 18px;
+}
+
+.material-icons {
+    margin-right: 10px;
+    vertical-align: middle;
+}
