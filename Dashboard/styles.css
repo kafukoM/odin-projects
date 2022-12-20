@@ -21,6 +21,7 @@
     border: 1px solid green;
     grid-column: 2/3;
     grid-row: 1/2;
+    padding: 25px;
 }
 
 .dashboard {
@@ -51,4 +52,53 @@ ul {
 .material-icons {
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.header {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-search {
+    grid-column: 1/2;
+}
+
+
+/*
+.header-profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+*/
+
+.header-profile {
+    display: grid;
+    grid-template-columns: 30px 30px 150px;
+    gap: 15px;
+}
+
+#rick1 {
+    max-width: 30px;
+}
+
+#rick2 {
+    max-width: 50px;
+}
+
+button {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.header-greeting {
+    display: grid;
+    grid-template-columns: 50px 200px;
+    gap: 20px;
+}
+
+
+/*
+.greeting {
+    display: grid;
+    grid-template-columns: 200px;
 }
