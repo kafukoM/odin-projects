@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 7fr;
     grid-template-rows: 1fr 5fr;
-    height: 1000px;
+    height: auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -108,9 +108,45 @@ button {
     gap: 20px;
 }
 
+.body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.projects,
+.side-body {
+    display: grid;
+    border: 1px solid brown;
+    margin: 10px;
+}
+
+.projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.cards {
+    border: 1px solid blue;
+    margin: 10px;
+}
+
+.side-body {
+    padding: 10px;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+}
+
+.announcements,
+.trending {
+    border: 1px solid blue;
+}
+
 
 /*
 .greeting {
     display: grid;
     grid-template-columns: 200px;
+}   grid-template-columns: 200px;
 }
