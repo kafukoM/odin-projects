@@ -4,6 +4,7 @@
 const content = document.querySelector('.content');
 const btn = document.querySelector('.btn-primary');
 
+
 const myLibrary = [];
 
 function Book(title, author, pages, status) {
@@ -36,11 +37,13 @@ console.log(myLibrary);
 btn.addEventListener('click', () => {
     for (let book in myLibrary) {
         let bodyContent = document.createElement('div');
-        bodyContent.innerHTML = `Title: ${myLibrary[book].title},
-        Author: ${myLibrary[book].author},
-        Pages: ${myLibrary[book].pages},
-        Status: ${myLibrary[book].status}`
+        bodyContent.innerHTML = `<h4>${myLibrary[book].title}</h4>
+                                        by
+                                    <div>${myLibrary[book].author}</div>
+                                    <div>Pages: ${myLibrary[book].pages}</div>
+                                    <div>Status: ${myLibrary[book].status}</div>`
 
+        bodyContent.setAttribute('class', 'card');
         content.appendChild(bodyContent);
 
     }
