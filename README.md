@@ -8,4 +8,3 @@ Repository containing all project assignments from the ODIN PROJECT website.
 4. [Calculator](https://kafukom.github.io/odin-projects/calculator/index.html)
 5. [Sign Up Form](https://kafukom.github.io/odin-projects/Sign%20up%20Form/index.html)
 6. [Admin Dashboard](https://kafukom.github.io/odin-projects/Dashboard/index.html)
-7. [Book Library](https://github.com/kafukoM/odin-projects/blob/main/Book%20Library/index.html)
