@@ -14,3 +14,15 @@
     padding: 10px;
     border: 1px solid blue;
 }
+
+.form {
+    display: flex;
+    border: 1px solid grey;
+    padding: 10px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.form>div {
+    margin-bottom: 15px;
+}
