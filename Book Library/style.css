@@ -26,3 +26,8 @@
 .form>div {
     margin-bottom: 15px;
 }
+
+.delete {
+    background-color: green;
+    color: white;
+}
