@@ -1,7 +1,3 @@
-/* eslint-disable camelcase */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable prefer-const */
-/* eslint-disable guard-for-in */
 const content = document.querySelector('.content');
 const submit = document.querySelector('.submit');
 const addBook = document.querySelector('.addBook');
@@ -21,21 +17,15 @@ function Book(title, author, pages, status) {
     this.status = status;
 };
 
-// const book1 = new Book('alex rider', 'anthony horowitz', 300, 'read');
-// const book2 = new Book('cherub', 'robert muchamore', 400, 'not read');
-
-
-
 
 function addBookToLibrary(bookObj) {
     myLibrary.push(bookObj);
 }
 
-
-
-
-// addBookToLibrary(book1);
-// addBookToLibrary(book2);
+function findIndex(bookObj) {
+    let index = myLibrary.findIndex((obj) => obj.name === bookObj.name);
+    return index;
+}
 
 form.style.display = 'none';
 
@@ -48,23 +38,38 @@ addBook.addEventListener('click', () => {
 
 
 
-console.log(myLibrary);
 submit.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(form_title.value)
-    const new_book = new Book(form_title.value, form_author.value, form_pages.value, form_status.value)
+    const new_book = new Book(form_title.value, form_author.value, form_pages.value, form_status.checked);
     addBookToLibrary(new_book);
+
+    let index = myLibrary.indexOf(new_book);
+    console.log(index);
     form.style.display = 'none';
     let bodyContent = document.createElement('div');
     bodyContent.innerHTML = `<h4>${new_book.title}</h4>
                                         by
                                     <div>${new_book.author}</div>
                                     <div>Pages: ${new_book.pages}</div>
-                                    <div>Status: ${new_book.status}</div>`
-
+                                    <div>Completed: ${new_book.status}</div>
+                                    <input type="button" class="delete" value="DELETE">`
     bodyContent.setAttribute('class', 'card');
+    bodyContent.setAttribute('data-index', index);
     content.appendChild(bodyContent);
 
+    let nodeList = document.querySelectorAll('.card');
 
+    console.log(myLibrary);
+
+    nodeList.forEach((bookCard) => {
+        const deleteBtn = bookCard.querySelector('.delete');
+        deleteBtn.addEventListener('click', (e) => {
+            bookCard.remove();
+
+            myLibrary.splice(index, 1);
+
+        });
+
+    })
 
 });
