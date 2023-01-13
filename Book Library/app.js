@@ -47,14 +47,28 @@ submit.addEventListener('click', (e) => {
     console.log(index);
     form.style.display = 'none';
     let bodyContent = document.createElement('div');
-    bodyContent.innerHTML = `<h4>${new_book.title}</h4>
+    bodyContent.innerHTML = `
+    <h4>${new_book.title}</h4>
                                         by
                                     <div>${new_book.author}</div>
                                     <div>Pages: ${new_book.pages}</div>
-                                    <div>Completed: ${new_book.status}</div>
-                                    <input type="button" class="delete" value="DELETE">`
+                                    <input type="button">
+                                    <input type="button" class="delete" value="DELETE">
+                                    `
     bodyContent.setAttribute('class', 'card');
     bodyContent.setAttribute('data-index', index);
+    let statusBtn = bodyContent.querySelector('input');
+    if (new_book.status === true) {
+        myLibrary.status = 'Completed';
+        statusBtn.setAttribute('class', 'checked');
+        statusBtn.setAttribute('value', 'Completed');
+
+    } else {
+        myLibrary.status = 'Not Read Yet';
+        statusBtn.setAttribute('class', 'unchecked');
+        statusBtn.setAttribute('value', 'Not Read');
+    }
+
     content.appendChild(bodyContent);
 
     let nodeList = document.querySelectorAll('.card');
