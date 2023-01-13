@@ -6,7 +6,7 @@
 
 .card {
     display: flex;
-    width: 100px;
+    width: 350px;
     height: fit-content;
     flex-direction: column;
     justify-content: center;
@@ -30,4 +30,14 @@
 .delete {
     background-color: green;
     color: white;
+}
+
+.checked {
+    background-color: green;
+    padding: 10px;
+}
+
+.unchecked {
+    background-color: red;
+    padding: 10px;
 }
