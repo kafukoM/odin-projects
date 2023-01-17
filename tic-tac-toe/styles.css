@@ -1,0 +1,33 @@
+.cell-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: 5%;
+    border: 1px solid red;
+    width: fit-content;
+    height: fit-content;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7,
+.cell-8,
+.cell-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    width: 70px;
+    height: 70px;
+}
