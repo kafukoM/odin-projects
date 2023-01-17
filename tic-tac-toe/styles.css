@@ -15,19 +15,22 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.cell-1,
-.cell-2,
-.cell-3,
-.cell-4,
-.cell-5,
-.cell-6,
-.cell-7,
-.cell-8,
-.cell-9 {
+.cell {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid blue;
     width: 70px;
     height: 70px;
+}
+
+.btn {
+    width: 25px;
+    border-radius: 10px;
+}
+
+.clicked {
+    background-color: green;
+    width: 25px;
+    border-radius: 10px;
 }
