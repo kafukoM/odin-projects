@@ -39,23 +39,18 @@ let gameBoard = {
         }
     },
 
-    playerFill: function() {
-        squareGroup.forEach((square) => {
-            square.addEventListener('click', () => {
-                square.innerHTML = `${p1.playerChoice}`;
-            })
+}
+
+let playerFill = function() {
+    squareGroup.forEach((square) => {
+        square.addEventListener('click', () => {
+            square.innerHTML = `${p1.playerChoice}`;
         })
-    }
-
-
-
-
-
+    })
 }
 
 
-gameBoard.playerFill();
-
+playerFill();
 
 /*
 btnX.addEventListener('click', () => {
