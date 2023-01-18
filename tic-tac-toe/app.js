@@ -1,11 +1,24 @@
-const btnX = document.querySelector('#x');
-const btnO = document.querySelector('#o');
+//const btnX = document.querySelector('#x');
+//const btnO = document.querySelector('#o');
 const squareGroup = document.querySelectorAll('.cell');
 
 let squareIndex = 0;
 
-let valueX = '';
-let valueO = '';
+
+
+function Player(name, playerChoice) {
+    return {
+        name,
+        playerChoice,
+        render() {
+            console.log(`Player ${name} has chosen ${playerChoice} for game`);
+        }
+    }
+
+}
+
+const p1 = Player('marvin', 'X');
+
 
 let gameBoard = {
     board: [
@@ -17,19 +30,31 @@ let gameBoard = {
         return this.board[x][y];
     },
 
-    fillGrid: function() {
+    defaultGrid: function() {
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
                 squareGroup[squareIndex].innerHTML = `${this.board[i][j]}`;
                 squareIndex++;
             }
         }
+    },
+
+    playerFill: function() {
+        squareGroup.forEach((square) => {
+            square.addEventListener('click', () => {
+                square.innerHTML = `${p1.playerChoice}`;
+            })
+        })
     }
+
+
+
+
 
 }
 
-gameBoard.fillGrid();
 
+gameBoard.playerFill();
 
 
 /*
