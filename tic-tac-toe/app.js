@@ -1,3 +1,8 @@
+const btn = document.querySelector('.addPlayer');
+const playerContainer = document.querySelector('.player-container');
+
+
+
 const gameBoard = () => {
     let board = [
         ['', '', ''],
@@ -9,7 +14,11 @@ const gameBoard = () => {
 
     let currentPlayer = player1;
 
-
+    playerContainer.innerHTML = `
+    Player 1 Choice: ${player1}
+    <br>
+    Player 2 Choice: ${player2}
+    `
 
 
 
@@ -77,14 +86,16 @@ const gameBoard = () => {
 }
 
 
-const newBoard = gameBoard();
+btn.addEventListener('click', () => {
+    const newBoard = gameBoard();
 
-const cells = document.querySelectorAll('.cell');
+    const cells = document.querySelectorAll('.cell');
 
-cells.forEach(cell => {
-    cell.addEventListener('click', () => {
-        const x = cell.dataset.x;
-        const y = cell.dataset.y;
-        newBoard.placeMove(x, y);
+    cells.forEach(cell => {
+        cell.addEventListener('click', () => {
+            const x = cell.dataset.x;
+            const y = cell.dataset.y;
+            newBoard.placeMove(x, y);
+        });
     });
-});
+})
