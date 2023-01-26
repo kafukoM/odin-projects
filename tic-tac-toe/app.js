@@ -1,81 +1,90 @@
-//const btnX = document.querySelector('#x');
-//const btnO = document.querySelector('#o');
-const squareGroup = document.querySelectorAll('.cell');
+const gameBoard = () => {
+    let board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+    let player1 = prompt("Player 1, please choose your symbol 'x' or 'o' ").toUpperCase();
+    let player2 = player1 === 'X' ? 'O' : 'X';
 
-let squareIndex = 0;
+    let currentPlayer = player1;
 
 
 
-function Player(name, playerChoice) {
-    return {
-        name,
-        playerChoice,
-        render() {
-            console.log(`Player ${name} has chosen ${playerChoice} for game`);
+
+
+    const placeMove = (x, y) => {
+        //push player symbol to array index
+        if (board[x][y] === '') {
+            board[x][y] = currentPlayer;
+
+            //render player symbol in DOM cell
+            const cell = document.getElementById(`cell-${x}-${y}`);
+            cell.innerHTML = currentPlayer;
+
+            //check game status
+            const state = checkState();
+            if (state === `${player1} wins`) {
+                alert(`${player1} wins!`);
+            } else if (state === `${player2} wins`) {
+                alert(`${player2} wins!`);
+            } else if (state === 'tie') {
+                alert('Tie!');
+            }
+            currentPlayer = currentPlayer === player1 ? player2 : player1;
         }
-    }
+    };
 
-}
+    const checkState = () => {
 
-const p1 = Player('marvin', 'X');
-
-
-let gameBoard = {
-    board: [
-        ['X', 'O', 'X'],
-        ['O', 'O', 'X'],
-        ['X', 'O', 'O']
-    ],
-    getBoard: function(x, y) {
-        return this.board[x][y];
-    },
-
-    defaultGrid: function() {
+        //check row win
         for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < 3; j++) {
-                squareGroup[squareIndex].innerHTML = `${this.board[i][j]}`;
-                squareIndex++;
+            if (board[i][0] === board[i][1] && board[i][1] === board[i][2] && board[i][0] !== '') {
+                return board[i][0] + ' wins';
+            }
+
+            //check column win
+            if (board[0][i] === board[1][i] && board[1][i] === board[2][i] && board[0][i] !== '') {
+                return board[0][i] + ' wins';
             }
         }
-    },
 
-}
-
-let playerFill = function() {
-    squareGroup.forEach((square) => {
-        square.addEventListener('click', () => {
-            square.innerHTML = `${p1.playerChoice}`;
-        })
-    })
-}
-
-
-playerFill();
-
-/*
-btnX.addEventListener('click', () => {
-    btnX.setAttribute('class', 'clicked');
-    valueX = btnX.getAttribute('value');
-    btnO.removeAttribute('class');
-    valueO = '';
-});
-
-btnO.addEventListener('click', () => {
-    btnO.setAttribute('class', 'clicked');
-    valueO = btnO.getAttribute('value');
-    btnX.removeAttribute('class');
-
-    valueX = '';
-});
-
-
-squareGroup.forEach((square) => {
-    square.addEventListener('click', () => {
-        if (valueX == 'X' && valueO == '') {
-            square.innerHTML = `${valueX}`;
-        } else if (valueO == 'O' && valueX == '') {
-            square.innerHTML = `${valueO}`;
+        //check diagonal
+        if (board[0][0] === board[1][1] && board[1][1] === board[2][2] && board[0][0] !== '') {
+            return board[0][0] + ' wins';
         }
-    })
-})
-*/
+        if (board[0][2] === board[1][1] && board[1][1] === board[2][0] && board[0][2] !== '') {
+            return board[0][2] + ' wins';
+        }
+        // check for a tie
+        let emptySpaces = 0;
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (board[i][j] === '') {
+                    emptySpaces++;
+                }
+            }
+        }
+        if (emptySpaces === 0) {
+            return 'tie';
+        }
+
+        // otherwise, the game is still in progress
+        return 'in progress';
+    };
+
+    return { placeMove, checkState };
+}
+
+
+const newBoard = gameBoard();
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach(cell => {
+    cell.addEventListener('click', () => {
+        const x = cell.dataset.x;
+        const y = cell.dataset.y;
+        newBoard.placeMove(x, y);
+    });
+});
