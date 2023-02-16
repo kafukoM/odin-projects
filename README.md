@@ -10,4 +10,7 @@ Repository containing all project assignments from the ODIN PROJECT website.
 6. [Admin Dashboard](https://kafukom.github.io/odin-projects/Dashboard/index.html)
 7. [Book Library](https://kafukom.github.io/odin-projects/Book%20Library/index.html)
 8. [Tic-tac-toe](https://kafukom.github.io/odin-projects/tic-tac-toe/index.html)
+9. [Restaurant Page](https://kafukom.github.io/odin-projects/restaurant-page/dist/index.html)
+
+
 
