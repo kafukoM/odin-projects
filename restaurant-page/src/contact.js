@@ -1,29 +1,28 @@
 export const createContact = () => {
     const content = document.querySelector('#content');
 
-    content.innerHTML = '';
+    const pageBody = document.querySelectorAll('.pageBody');
 
-    const menuTab = document.createElement('button');
-    menuTab.innerText = 'Menu';
-    content.appendChild(menuTab);
+    pageBody.forEach(page => {
+        page.remove();
+    })
 
-
-    const contactTab = document.createElement('button');
-    contactTab.innerText = 'Contact';
-    content.appendChild(contactTab);
-
+    const contactBody = document.createElement('div');
+    contactBody.setAttribute('class', 'pageBody');
 
     const contactHeadline = document.createElement('h1');
     contactHeadline.innerText = 'Contact';
-    content.appendChild(contactHeadline);
+    contactBody.appendChild(contactHeadline);
 
     const phone = document.createElement('p');
     phone.innerText = 'Phone: (123) 456-7890';
-    content.appendChild(phone);
+    contactBody.appendChild(phone);
 
     const email = document.createElement('p');
     email.innerText = 'Email: contact@wonderfulrestaurant.com';
-    content.appendChild(email);
+    contactBody.appendChild(email);
+
+    content.appendChild(contactBody);
 
 
 };
