@@ -1,42 +1,38 @@
-import { createRestaurantPage } from './restaurant.js';
-import { createMenu } from './menu.js';
 import { createContact } from './contact.js';
+import { createMenu } from './menu.js';
 import './styles.css';
 
-document.addEventListener('DOMContentLoaded', () => {
+
+const content = document.querySelector('#content');
+
+const menuTab = document.createElement('button');
+menuTab.innerText = 'Menu';
+content.appendChild(menuTab);
 
 
-    createRestaurantPage();
-
-    const menuTab = document.querySelector('button:nth-of-type(1)');
-    const contactTab = document.querySelector('button:nth-of-type(2)');
-
-    menuTab.addEventListener('click', createMenu);
-    contactTab.addEventListener('click', createContact);
-
-
-
-});
+const contactTab = document.createElement('button');
+contactTab.innerText = 'Contact';
+content.appendChild(contactTab);
 
 
 
-/*
-let activeTab = 'menu'; // Track the currently active tab
-
-const switchTab = (tabName, createFunction) => {
-    if (activeTab !== tabName) {
-        // Remove previously displayed content
-        const content = document.querySelector('#content');
-        content.innerHTML = '';
-        // Load new content
-        createFunction();
-        activeTab = tabName;
-    }
-};
-
-    
+menuTab.addEventListener('click', createMenu);
+contactTab.addEventListener('click', createContact);
 
 
-//menuTab.addEventListener('click', switchTab('menu', createMenu));
+const header = document.createElement('header');
+header.innerText = 'Wonderful Restaurant';
+content.appendChild(header);
 
-//contactTab.addEventListener('click', switchTab('contact', createMenu));*/
+
+
+const image = document.createElement('img');
+image.src = 'restaurant.jpg';
+image.alt = 'Image of Restaurant';
+image.setAttribute('class', 'pageBody');
+content.appendChild(image);
+
+const copy = document.createElement('p');
+copy.innerText = "Welcome to the Wonderful Restaurant! Our passion is serving delicious food made with the freshest ingredients. Whether you're in the mood for a quick bite or a sit-down meal, we've got you covered. Our welcoming atmosphere and friendly staff will make you feel right at home. We can't wait to see you soon!";
+copy.setAttribute('class', 'pageBody');
+content.appendChild(copy);
