@@ -1,6 +1,8 @@
 const imageContainer = document.querySelector('.image-container');
 const nextBtn = document.getElementById('right');
 const backBtn = document.getElementById('left');
+const circleArray = document.querySelectorAll('a');
+
 
 
 const image1 = './rm1.jpg';
@@ -20,6 +22,7 @@ const imageArray = [
 
 let currentImage = document.createElement('img');
 let i = 0;
+let j = 0;
 
 currentImage.setAttribute('src', image1);
 imageContainer.appendChild(currentImage);
@@ -28,12 +31,12 @@ nextBtn.addEventListener('click', () => {
     i++;
     currentImage.setAttribute('src', imageArray[i]);
     imageContainer.appendChild(currentImage);
-    console.log(imageContainer);
     if (i >= imageArray.length - 1) {
         currentImage.setAttribute('src', imageArray[imageArray.length - 1]);
         imageContainer.appendChild(currentImage);
     }
 
+    updateCircleStatus();
 
 
 })
@@ -50,5 +53,12 @@ backBtn.addEventListener('click', () => {
 
     }
 
-
+    updateCircleStatus();
 })
+
+function updateCircleStatus() {
+    for (let j = 0; j < circleArray.length; j++) {
+        circleArray[j].classList.remove('fillColor');
+    }
+    circleArray[i].classList.add('fillColor');
+}
