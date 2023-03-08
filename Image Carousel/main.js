@@ -22,7 +22,6 @@ const imageArray = [
 
 let currentImage = document.createElement('img');
 let i = 0;
-let j = 0;
 
 currentImage.setAttribute('src', image1);
 imageContainer.appendChild(currentImage);
@@ -62,3 +61,12 @@ function updateCircleStatus() {
     }
     circleArray[i].classList.add('fillColor');
 }
+
+circleArray.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        i = index;
+        currentImage.setAttribute('src', imageArray[i]);
+        imageContainer.appendChild(currentImage);
+        updateCircleStatus();
+    });
+});
