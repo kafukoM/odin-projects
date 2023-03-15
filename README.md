@@ -12,6 +12,7 @@ Repository containing all project assignments from the ODIN PROJECT website.
 8. [Tic-tac-toe](https://kafukom.github.io/odin-projects/tic-tac-toe/index.html)
 9. [Restaurant Page](https://kafukom.github.io/odin-projects/restaurant-page/dist/index.html)
 10. [Image Carousel](https://kafukom.github.io/odin-projects/Image%20Carousel/index.html)
+11. [GIF Search](https://kafukom.github.io/odin-projects/Gif%20Search/index.html)
 
 
 
