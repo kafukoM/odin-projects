@@ -13,6 +13,7 @@ Repository containing all project assignments from the ODIN PROJECT website.
 9. [Restaurant Page](https://kafukom.github.io/odin-projects/restaurant-page/dist/index.html)
 10. [Image Carousel](https://kafukom.github.io/odin-projects/Image%20Carousel/index.html)
 11. [GIF Search](https://kafukom.github.io/odin-projects/Gif%20Search/index.html)
+12. [Weather App](https://kafukom.github.io/odin-projects/Weather%20App/index.html)
 
 
 
