@@ -16,14 +16,15 @@ window.onload = () => city.textContent = '';
 async function getWeatherData() {
     try {
         console.log(city.value)
-        const coordinates = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city.value}&appid=${key}`)
+        const coordinates = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city.value}&appid=${key}`, { mode: 'cors' })
+
         const objectCoordinates = await coordinates.json()
         const latitude = objectCoordinates[0].lat
         const longitude = objectCoordinates[0].lon
 
         console.log(latitude, longitude)
 
-        const weatherJSON = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`)
+        const weatherJSON = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`, { mode: 'cors' })
 
         const weatherObj = await weatherJSON.json()
 
