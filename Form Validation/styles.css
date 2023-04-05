@@ -1,0 +1,55 @@
+body {
+    font: 1em sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+}
+
+input,
+select,
+button {
+    width: 50%;
+    margin: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    align-self: center;
+}
+
+input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
