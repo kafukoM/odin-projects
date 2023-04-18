@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
 
-class Education extends Component {
+class Work extends Component {
     constructor(props){
         super(props);
 
         this.state = {
-            schoolName: '',
-            titleOfStudy: '',
-            dateOfStudy: '',
+            companyName: '',
+            jobTitle: '',
+            jobDuration: '',
         }
 
 
@@ -21,49 +21,48 @@ class Education extends Component {
 
     handleEdit = () => {
         this.props.onEdit();
-        this.setState(this.props.education);
+        this.setState(this.props.work);
       };
 
     handleSubmit = event => {
         event.preventDefault();
         this.props.onSubmit(this.state);
-        
       };
 
       
   render() {
 
-    const {schoolName, titleOfStudy, dateOfStudy} = this.state;
+    const {companyName, jobTitle, jobDuration} = this.state;
 
     return (
       <div>
-        <h2>EDUCATION</h2>
-        {this.props.educationEditing ? (
+        <h2>WORK EXPERIENCE</h2>
+        {this.props.workEditing ? (
           <form onSubmit={this.handleSubmit}>
             <label>
-              School Name:
+              Company Name:
               <input
                 type="text"
-                name="schoolName"
-                value={schoolName}
+                name="companyName"
+                value={companyName}
                 onChange={this.handleInputChange}
               />
             </label>
             <label>
-              Title of Study:
+              Job Title:
               <input
                 type="text"
-                name="titleOfStudy"
-                value={titleOfStudy}
+                name="jobTitle"
+                value={jobTitle}
                 onChange={this.handleInputChange}
               />
             </label>
             <label>
-              Date of Study:
+              Job Duration:
               <input
-                type="text"
-                name="dateOfStudy"
-                value={dateOfStudy}
+                type="number"
+                name="jobDuration"
+                value={jobDuration}
                 onChange={this.handleInputChange}
               />
             </label>
@@ -72,13 +71,13 @@ class Education extends Component {
         ) : (
           <div>
             <p>
-              School Name: {schoolName}
+              Company Name: {companyName}
             </p>
             <p>
-              Title of Study: {titleOfStudy}
+              Job Title: {jobTitle}
             </p>
             <p>
-              Date of Study: {dateOfStudy}
+              Job Duration: {jobDuration}
             </p>
             <button onClick={this.handleEdit}>Edit Details</button>
           </div>
@@ -90,4 +89,4 @@ class Education extends Component {
 
 
 
-export default Education;
+export default Work;

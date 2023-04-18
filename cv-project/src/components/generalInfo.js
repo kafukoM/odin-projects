@@ -21,17 +21,18 @@ class GeneralInfo extends Component {
     }
 
     handleEditClick = () => {
-        this.setState({isEditable: true});
-    }
+        this.props.onEdit();
+        this.setState(this.props.generalInfo);
+      };
 
-    handleSubmit = (event) => {
+    handleSubmit = event => {
         event.preventDefault();
-        this.setState({isEditable: false});
-    }
+        this.props.onSubmit(this.state);
+      };
 
     render(){
         const { name, email, phoneNumber, isEditable} = this.state;
-        if(isEditable){
+        if(this.props.generalInfoEditing){
             return (
                 <form onSubmit={this.handleSubmit}>
                     <div>

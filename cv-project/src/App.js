@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import GeneralInfo from './components/generalInfo.js'
 import Education from './components/education.js'
+import Work from './components/work.js'
+
+
 
 
 
@@ -18,10 +21,18 @@ class App extends Component {
             education: {
                 schoolName: '',
                 titleOfStudy: '',
-                dateOfStudy: ''
-              },
+                dateOfStudy: '',
+            },
 
-            editing: false,
+            work: {
+                companyName: '',
+                jobTitle: '',
+                jobDuration: '',
+            },  
+
+            generalInfoEditing: false,
+            educationEditing: false,
+            workEditing: false,
         }
 
 
@@ -30,26 +41,39 @@ class App extends Component {
     handleEducationSubmit = education => {
         this.setState({
           education: education,
-          editing: false
+          educationEditing: false
         });
       };
     
-      handleEducationEdit = () => {
+    handleEducationEdit = () => {
         this.setState({
-          editing: true
+          educationEditing: true
         })
     }
 
     handleGeneralInfoSubmit = generalInfo => {
         this.setState({
             generalInfo: generalInfo,
-            editing: false
+            generalInfoEditing: false
         })
     }
 
     handleGeneralInfoEdit = () => {
         this.setState({
-            editing: true
+            generalInfoEditing: true
+        })
+    }
+
+    handleWorkSubmit = work => {
+        this.setState({
+          work: work,
+          workEditing: false
+        });
+      };
+    
+    handleWorkEdit = () => {
+        this.setState({
+          workEditing: true
         })
     }
 
@@ -58,15 +82,21 @@ class App extends Component {
         <div>
             <GeneralInfo 
             generalInfo = { this.state.generalInfo }
-            editing = { this.state.editing }
+            generalInfoEditing = { this.state.generalInfoEditing }
             onSubmit = { this.handleGeneralInfoSubmit }
             onEdit={this.handleGeneralInfoEdit}
             /> 
             <Education
             education={this.state.education}
-            editing={this.state.editing}
+            educationEditing={this.state.educationEditing}
             onSubmit={this.handleEducationSubmit}
             onEdit={this.handleEducationEdit}
+          />
+          <Work
+            work={this.state.work}
+            workEditing={this.state.workEditing}
+            onSubmit={this.handleWorkSubmit}
+            onEdit={this.handleWorkEdit}
           />
         </div>    
             
