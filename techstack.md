@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 kafukoM/odin-projects is built on the following main stack:
+
 - [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
 - [React](https://reactjs.org/) – Javascript UI Libraries
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -11,11 +12,13 @@ kafukoM/odin-projects is built on the following main stack:
 - [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 kafukoM/odin-projects is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/830/jest.png' alt='Jest'/> [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
 - <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -25,14 +28,15 @@ kafukoM/odin-projects is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [kafukoM/odin-projects](https://github.com/kafukoM/odin-projects)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|22<br/>Tools used|11/23/23 <br/>Report generated|
+|22<br/>Tools used|12/14/23 <br/>Report generated|
 |------|------|
 </div>
 
@@ -160,7 +164,7 @@ Full tech stack [here](/techstack.md)
 |[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|04/17/23|unknown |MIT|N/A|
 |[react-scripts](https://www.npmjs.com/react-scripts)|v5.0.1|04/17/23|unknown |MIT|N/A|
 |[style-loader](https://www.npmjs.com/style-loader)|v3.3.2|02/16/23|unknown |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v4.5.0|10/29/23|kafukoM |N/A|N/A|
+|[vite](https://www.npmjs.com/vite)|v4.5.0|10/29/23|kafukoM |N/A|[CVE-2023-49293](https://github.com/advisories/GHSA-92r3-m2mg-pj97) (Moderate)|
 |[webpack-cli](https://www.npmjs.com/webpack-cli)|v5.0.1|02/16/23|unknown |MIT|N/A|
 
 <br/>
