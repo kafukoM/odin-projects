@@ -15,6 +15,7 @@ Repository containing all project assignments from the ODIN PROJECT website.
 11. [GIF Search](https://kafukom.github.io/odin-projects/Gif%20Search/index.html)
 12. [Weather App](https://kafukom.github.io/odin-projects/Weather%20App/index.html)
 13. [CV Project](https://github.com/kafukoM/odin-projects/blob/main/cv-react/index.html)
+14. [Mini Message Board](https://mini-message-board-2s8z.onrender.com/)
 
 
 
