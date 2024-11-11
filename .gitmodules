@@ -1,0 +1,3 @@
+[submodule "Mini Message Board"]
+	path = Mini Message Board
+	url = https://github.com/kafukoM/mini-message-board.git
