@@ -1,7 +1,8 @@
 repo_name: kafukoM/odin-projects
 report_id: d255b75c2d3c43dbe3507605158f8264
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-23T14:22:20+00:00'
+timestamp: '2024-02-29T18:52:27+00:00'
 requested_by: kafukoM
 provider: github
 branch: main
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/kafukoM/odin-projects
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/kafukoM/odin-projects
   detection_source: Repo Metadata
 - name: React
   description: A JavaScript library for building user interfaces
@@ -36,8 +39,8 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
-  detection_source_url: cv-project/package-lock.json
-  detection_source: cv-react/package.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
+  detection_source: cv-project/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-17 15:37:50.000000000 Z
 - name: css-loader
@@ -49,6 +52,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/8074/default_d2b16fd6997fb2e164de645a34f9b8d5a880d999.png
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/restaurant-page/package.json
   detection_source: restaurant-page/package.json
   last_updated_by: unknown
   last_updated_on: 2023-02-16 08:32:21.000000000 Z
@@ -61,6 +65,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-react/package.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -72,6 +77,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/kafukoM/odin-projects
   detection_source: Repo Metadata
 - name: Jest
   description: Painless JavaScript Unit Testing
@@ -83,8 +89,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/830/jest.png
-  detection_source_url: Battleship/package-lock.json
-  detection_source: Testing Practice/package.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/Battleship/package-lock.json
+  detection_source: Battleship/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-05 07:45:13.000000000 Z
 - name: Vite
@@ -96,6 +102,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: JS Build Tools / JS Task Runners
   image_url: https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-react/package.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -109,8 +116,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: JS Build Tools / JS Task Runners
   image_url: https://img.stackshare.io/service/1682/IMG_4636.PNG
-  detection_source_url: cv-project/package-lock.json
-  detection_source: restaurant-page/webpack.config.js
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
+  detection_source: restaurant-page/package.json
   last_updated_by: unknown
   last_updated_on: 2023-02-16 08:32:21.000000000 Z
 - name: npm
@@ -121,6 +128,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/restaurant-page/package.json
   detection_source: restaurant-page/package.json
   last_updated_by: unknown
   last_updated_on: 2023-02-16 08:32:21.000000000 Z
@@ -130,6 +138,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/Battleship/index.html
   detection_source: Battleship/index.html
   last_updated_by: unknown
   last_updated_on: 2023-04-05 07:45:13.000000000 Z
@@ -143,7 +152,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17424/default_1cdcda15ebb7caed879f8340bc212b44c4ec9dac.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-project/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-17 15:37:50.000000000 Z
@@ -158,7 +167,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-project/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-17 15:37:50.000000000 Z
@@ -172,7 +181,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -186,7 +195,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -200,7 +209,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -214,7 +223,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
@@ -228,8 +237,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: cv-project/package-lock.json
-  detection_source: cv-react/package.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
+  detection_source: cv-project/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-17 15:37:50.000000000 Z
 - name: react-scripts
@@ -242,7 +251,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: cv-project/package.json
   last_updated_by: unknown
   last_updated_on: 2023-04-17 15:37:50.000000000 Z
@@ -256,7 +265,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15822/default_004658cda9b38934f2871435e9dc15608c86e8be.png
-  detection_source_url: cv-project/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-project/package-lock.json
   detection_source: restaurant-page/package.json
   last_updated_by: unknown
   last_updated_on: 2023-02-16 08:32:21.000000000 Z
@@ -269,10 +278,24 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/npm/image.png
-  detection_source_url: cv-react/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/cv-react/package-lock.json
   detection_source: cv-react/package.json
   last_updated_by: kafukoM
   last_updated_on: 2023-10-29 10:53:16.000000000 Z
+  vulnerabilities:
+  - name: Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive
+      filesystem
+    cve_id: CVE-2024-23331
+    cve_url: https://github.com/advisories/GHSA-c24v-8rfc-w8vw
+    detected_date: Jan 20
+    severity: high
+    first_patched: 4.5.2
+  - name: Vite XSS vulnerability in `server.transformIndexHtml` via URL payload
+    cve_id: CVE-2023-49293
+    cve_url: https://github.com/advisories/GHSA-92r3-m2mg-pj97
+    detected_date: Dec 6
+    severity: moderate
+    first_patched: 4.5.1
 - name: webpack-cli
   description: CLI for webpack &amp; friends
   package_url: https://www.npmjs.com/webpack-cli
@@ -283,7 +306,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15826/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: restaurant-page/package-lock.json
+  detection_source_url: https://github.com/kafukoM/odin-projects/blob/main/restaurant-page/package-lock.json
   detection_source: restaurant-page/package.json
   last_updated_by: unknown
   last_updated_on: 2023-02-16 08:32:21.000000000 Z
