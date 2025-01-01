@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games List</title>
+  </head>
+  <body>
+    <form action="/games/create" method="GET" style="display: inline">
+      <button type="submit">Create New Game</button>
+    </form>
+    <h1>Game Inventory</h1>
+    <ul>
+      <% games.forEach((game) => { %>
+      <li>
+        <strong><%= game.title %></strong>
+        (Released: <%= game.release_date %>)<br />
+        Genre: <%= game.genre || "Unknown" %> <br />
+        Developer: <%= game.developer || "Unknown" %> (<%=
+        game.developer_country || "Unknown" %>) <% console.log(game); %>
+        <!-- Add an Update Button -->
+        <form
+          action="games/<%= game.game_id %>/update"
+          method="GET"
+          style="display: inline"
+        >
+          <button type="submit">Update</button>
+        </form>
+
+        <form
+          action="games/<%= game.game_id %>/delete"
+          method="GET"
+          style="display: inline"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
