@@ -16,10 +16,8 @@ Repository containing all project assignments from the ODIN PROJECT website.
 12. [Weather App](https://kafukom.github.io/odin-projects/Weather%20App/index.html)
 13. [CV Project](https://github.com/kafukoM/odin-projects/blob/main/cv-react/index.html)
 14. Mini Message Board
-      - [Live project](https://mini-message-board-2s8z.onrender.com/)
-      - [Source Code](https://github.com/kafukoM/mini-message-board)
-
-
-
-
-
+    - [Live project](https://mini-message-board-2s8z.onrender.com/)
+    - [Source Code](https://github.com/kafukoM/mini-message-board)
+15. Inventory App
+    - [Live Project](https://node-inventory-app.onrender.com/games)
+    - [Source Code](https://github.com/kafukoM/odin-projects/blob/main/INVENTORY%20APP)
