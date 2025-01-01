@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Game</title>
+  </head>
+  <body>
+    <h1>Update Game</h1>
+    <form action="/games/<%= singleGame.id %>/update" method="POST">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" value="<%= singleGame.title %>">
+        </div>
+        <div>
+          <label for="genre">Genre:</label>
+          <select id="genre" name="genre">
+            <% allGenres.forEach((genre) => { %>
+              <option value="<%= genre.id %>" <%= genre.id === singleGame.genre_id ? "selected" : "" %> >
+                <%= genre.name %>
+              </option>
+            <% }) %>
+          </select>
+        </div>
+        <div>
+          <label for="developer">Publisher:</label>
+          <input 
+            type="text" 
+            id="developer" 
+            name="developer" 
+            value="<%= allDevelopers.find(dev => dev.id === singleGame.developer_id)?.name || 'Unknown' %>" 
+            readonly
+          >
+        </div>
+        
+        <button type="submit">Update Game</button>
+      </form>
+      
+  </body>
+</html>
